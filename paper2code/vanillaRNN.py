@@ -383,7 +383,7 @@ def main():
     # ── Instantiate & train ───────────────────────────────────────────────
     rnn = VanillaRNN(
         vocab_size=vocab_size,
-        hidden_size=128,
+        hidden_size=512,
         learning_rate=1e-2,
         seq_length=25,
     )
@@ -392,8 +392,8 @@ def main():
         data=corpus,
         char_to_idx=char_to_idx,
         idx_to_char=idx_to_char,
-        epochs=50,
-        print_every=200,
+        epochs=300,
+        print_every=100,
         sample_every=1000,
         sample_length=200,
     )
